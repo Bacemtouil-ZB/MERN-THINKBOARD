@@ -6,7 +6,7 @@ import Navbar from "../Components/Navbar";
 import RateLimitedUi from '../Components/RateLimitedUi';
 import NoteCard from '../Components/NoteCard';
 import api from '../lib/axios';
-import NotesNotFound from '../Components/notesNotFound' ; 
+import NotesNotFound from '../Components/NotesNotFound' ; 
 
 
 
