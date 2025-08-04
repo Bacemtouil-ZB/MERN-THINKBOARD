@@ -1,0 +1,113 @@
+# 🧠 MERN ThinkBoard – Notes App
+
+Welcome to **MERN ThinkBoard** — my first full-stack notes app built with the MERN stack (MongoDB, Express, React, Node). This project helped me learn how full-stack applications work, including how to build REST APIs, connect databases, and deploy apps online.
+
+---
+
+## 🚀 Features
+
+- 🧱 **Full-Stack App** – Built with MongoDB, Express, React, and Node.js
+- ✨ **CRUD Notes** – Create, update, and delete notes with title and description
+- ⚙️ **Rate Limiting** – Implemented using Upstash Redis to avoid spamming the API
+- 🧪 **.env Configuration** – Easy-to-use environment variables for secrets
+- 🌐 **Responsive UI** – Works on mobile, tablet, and desktop
+- 📦 **Deployment Ready** – Clean structure and ready to publish
+- 🧰 **Beginner Friendly** – Designed while learning the MERN stack step by step
+
+---
+
+## 📂 Project Structure
+
+```
+mern-thinkboard/
+│
+├── backend/                 # Express + MongoDB + Rate Limiter
+│   ├── routes/
+│   ├── controllers/
+│   ├── config/
+│   ├── middleware/
+│   └── server.js
+│
+├── frontend/                # React + Axios + Tailwind CSS
+│   ├── src/
+│   │   ├── Components/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   └── vite.config.js
+│
+└── README.md               # You are here
+```
+
+---
+
+## 🔧 Backend Setup
+
+1. Navigate to the backend folder:
+```bash
+cd backend
+```
+
+2. Create a `.env` file with the following content:
+```env
+MONGO_URI=your_mongodb_connection_string
+UPSTASH_REDIS_REST_URL=your_upstash_redis_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
+NODE_ENV=development
+PORT=5001
+```
+
+3. Install dependencies and run the server:
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 💻 Frontend Setup
+
+1. Navigate to the frontend folder:
+```bash
+cd frontend
+```
+
+2. Install dependencies and run the development server:
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 🌍 Production Deployment
+
+In production, the frontend will make API requests to the same domain using a relative path (`/api`), based on this logic:
+
+```js
+const BASE_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:5001/api"
+    : "/api";
+```
+
+This makes the app compatible with hosting on platforms like Render, Vercel, or using Netlify for frontend + Render for backend.
+
+---
+
+## 🔗 Live Demo & Tutorial
+
+- 📺 **YouTube Video**: Watch the tutorial here
+- 🌐 **Live Demo**: Coming soon or hosted on Render/Vercel
+
+---
+
+## 🙋‍♂️ Author
+
+**Made by Touil Bacem**
+- 📚 Beginner in full-stack development, learning by building!
+
+---
+
+## ✅ Status
+
+This project is complete and fully working. Built while learning, and always open to improvements.
